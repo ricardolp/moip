@@ -82,6 +82,6 @@ class MoipServiceProvider extends ServiceProvider
      */
     private function getHomologated()
     {
-        return $this->app->make('config')->get('moip.homologated') === true ? Api::ENDPOINT_PRODUCTION : Api::ENDPOINT_SANDBOX;
+        return config('artesaos.moip.homologated') === true ? Api::ENDPOINT_PRODUCTION : Api::ENDPOINT_SANDBOX;
     }
 }
